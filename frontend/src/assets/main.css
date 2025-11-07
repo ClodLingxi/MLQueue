@@ -1,0 +1,93 @@
+@import './base.css';
+
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f7fa;
+  color: #303133;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 通用按钮样式 */
+button {
+  font-family: inherit;
+}
+
+/* 通用输入框样式 */
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* 代码块样式 */
+code {
+  font-family: 'Courier New', monospace;
+}
+
+/* 链接样式 */
+a {
+  color: #409eff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #66b1ff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch !important;
+    height: auto !important;
+    padding: 15px !important;
+  }
+
+  .nav {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .info-cards,
+  .metrics-grid,
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
