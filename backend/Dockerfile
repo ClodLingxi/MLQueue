@@ -3,6 +3,11 @@ FROM golang:1.24-alpine AS builder
 
 WORKDIR /app
 
+# China MainLand Pepositories
+# RUN echo "https://mirrors.aliyun.com/alpine/v3.20/main" > /etc/apk/repositories && \
+#    echo "https://mirrors.aliyun.com/alpine/v3.20/community" >> /etc/apk/repositories
+# ENV GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+
 # Install dependencies
 RUN apk add --no-cache git
 
